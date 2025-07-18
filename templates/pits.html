@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+{% block head %}
+    {{ super() }}
+{% endblock %}
+{% block sidebar %}
+    {{ super() }}
+{% endblock %}
+{% block body %}
+    <form action="{{ url_for('pits') }}" method="post">
+        <p>Hola pits</p>
+    </form>
+{% endblock %}

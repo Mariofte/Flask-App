@@ -1,0 +1,16 @@
+{
+    "python.pythonPath": "venv/Scripts/python.exe", // o "venv/bin/python" en Linux/Mac
+    "python.envFile": "${workspaceFolder}/.env",
+    "python.analysis.extraPaths": [
+        "."
+    ],
+    "files.exclude": {
+        "**/__pycache__": true
+    },
+    "terminal.integrated.env.windows": {
+        "FLASK_APP": "main.py",
+        "FLASK_ENV": "development"
+    },
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+}

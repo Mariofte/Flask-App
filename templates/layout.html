@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/sidebar.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <script src="{{ url_for('static', filename='js/sidebar.js') }}"></script>
+    {% endblock %}
+</head>
+<body>
+    {% block sidebar %}
+        <div id="Sidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebar" onclick="Closebar()">&times;</a>
+            <a href="{{ url_for('match') }}">Match</a>
+            <a href="{{ url_for('pits') }}">Pits</a>
+        </div>
+        <div id="main">
+            <button type="sumbit" onclick="Openbar()">&#9776;</button>
+        </div>
+    {% endblock %}
+    {% block body %}{% endblock %}
+</body>
+</html>

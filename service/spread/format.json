@@ -1,0 +1,16 @@
+{
+    "backgroundColor": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.0
+    },
+    "horizontalAlignment": "CENTER",
+    "textFormat": {
+        "foregroundColor": {
+            "red": 0.0,
+            "green": 0.0,
+            "blue": 0.0
+        }
+    },
+    "fontSize": 1
+}
