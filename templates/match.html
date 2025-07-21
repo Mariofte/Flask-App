@@ -1,16 +1,100 @@
 {% extends 'layout.html' %}
 {% block head %}
     {{ super() }}
+    {% block script %}
+        <script src="{{ url_for('static', filename='js/Math.js') }}"></script>
+    {% endblock %}
 {% endblock %}
 {% block sidebar %}
     {{ super() }}
 {% endblock %}
 {% block body %}
+    <h1>App FRC Matches</h1>
     <form action="{{ url_for('match') }}" method="post">
-        <label>Dime un numero</label><br>
-        <input type="text" name="data[]"><br>
-        <label>Dime orto numero</label><br>
-        <input type="text" name="data[]"><br>
-        <button type="submit">Ingresar</button><br>
+        <label for="scouter">¿Iniciales del scouter?</label><br>
+        <input type="text" name="data[]" id="scouter"><br>
+
+        <label for="match">¿Tipo de match?</label><br>
+        <input type="text" name="data[]" id="match"><br>
+
+        <label for="num_match">¿Número de match?</label><br>
+        <input type="number" name="data[]" id="num_match"><br>
+
+        <label for="num_team">¿Número de equipo?</label><br>
+        <input type="text" name="data[]" id="num_team"><br>
+
+        <img src="{{ url_for('static', filename='image/Cancha.png') }}"><br>
+
+        <label for="posición">¿Posición inicial?</label><br>
+        <input type="number" name="data[]" id="posición"><br>
+
+        <details>
+            <summary>Match</summary>
+
+            <h2>Autonomo</h2>
+
+            <p>¿Salio de la zona inicial?</p>
+            <input type="radio" name="data[]" id="salio_si" value="si">
+            <label for="salio_si_a">Si</label><br>
+            <input type="radio" name="data[]" id="salio_no_a" value="no">
+            <label for="salio_no">No</label><br>
+
+            <label for="l1_a">Level 1</label><br>
+            <input type="number" name="data[]" id="l1_a"><br>
+
+            <label for="l2_a">Level 2</label><br>
+            <input type="number" name="data[]" id="l2_a"><br>
+
+            <label for="l3_a">Level 3</label><br>
+            <input type="number" name="data[]" id="l3_a"><br>
+
+            <label for="l4_a">Level 4</label><br>
+            <input type="number" name="data[]" id="l4_a"><br>
+
+            <label for="processor_a">processor</label><br>
+            <input type="number" name="data[]" id="processor_a"><br>
+
+            <label for="net_a">net</label><br>
+            <input type="number" name="data[]" id="net_a"><br>
+
+            <p id="autonomo"></p>
+
+            <h2>TeleOp</h2>
+
+            <label for="l1_t">Level 1</label><br>
+            <input type="number" name="data[]" id="l1_t"><br>
+
+            <label for="l2_t">Level 2</label><br>
+            <input type="number" name="data[]" id="l2_t"><br>
+
+            <label for="l3_t">Level 3</label><br>
+            <input type="number" name="data[]" id="l3_t"><br>
+
+            <label for="l4_t">Level 4</label><br>
+            <input type="number" name="data[]" id="l4_t"><br>
+
+            <label for="processor_t">processor</label><br>
+            <input type="number" name="data[]" id="processor_t"><br>
+
+            <label for="net_t">net</label><br>
+            <input type="number" name="data[]" id="net_t"><br>
+
+            <p id="teleOp"></p>
+
+            <h2>End game</h2>   
+            <label for="estaciona">¿Donde se estaciona?</label>
+            <select name="data[]" id="estaciona" >
+                <option value="No se estaciono">No se estaciono</option>
+                <option value="Intento pero no pudo">Intento pero no pudo</option>
+                <option value="barage zone">BARAGE ZONE</option>
+                <option value="shallow cage">shallow CAGE</option>
+                <option value="deep cage">deep CAGE</option>
+            </select>
+
+            <p id="end"></p>
+
+        </details>
+
+        <button type="submit" onclick="document.getElementsByName('data[]').values = '';">Ingresar</button><br>
     </form>
 {% endblock %}

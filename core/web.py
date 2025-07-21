@@ -53,4 +53,4 @@ class Web(Flask):
                 data = ''.join(f.readlines())
             return render_template('view.html', data=data)
         else:
-            print('peligro')
+            self.logger.error('No existe el archivo')
