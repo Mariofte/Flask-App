@@ -2,4 +2,4 @@
 __pycache__/
 *.pyc
 
-service/spread/token.json
+service\spread\token.json

@@ -1,8 +1,12 @@
-import requests
+import requests as req
 
-API_URL = "https://www.thebluealliance.com/api/v3/event/2025casj/matches"
-headers = {'X-TBA-Auth-Key': 'TU_CLAVE'}
-resp = requests.get(API_URL, headers=headers)
-datos = resp.json()
-for match in datos:
-    print(match['key'], match['comp_level'], match['score_breakdown'])
+class TBA:
+    def __init__(self):
+        self.url = 'https://www.thebluealliance.com/api/v3/'
+        self.headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3',
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        }
+        
+    

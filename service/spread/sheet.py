@@ -32,38 +32,51 @@ class Sheet:
 
         except (json.JSONDecodeError, gs.exceptions.APIError, Exception) as e:
              self.logger.error(f'Hubo un error en el token: {e}')
-
-    def work(self, sheet:int):
-        self.logger.info('Buscando hoja')
-        try:
-            return self.auth.open_by_key(self.id).get_worksheet(sheet)
-        
-        except (gs.exceptions.APIError, gs.exceptions.SpreadsheetNotFound, Exception) as e:
-             self.logger.error(f'Hubo un error en la hoja: {e}')
-             return None
+            
     
+
     def post(self, data:list, sheet:int, row:int):
         try:
-            work = self.work(sheet)
-            work.insert_rows(data, row)
-            work.format("1:1000", self.format)
-            self.logger.info('Se formatearon y mandaron lo datos')
+            self.logger.info('Buscando hoja')
+            work = self.auth.open_by_url(f'https://docs.google.com/spreadsheets/d/{self.id}/edit?gid=0#gid=0').get_worksheet(sheet)
+            
+            if work is None:
+                self.logger.error('Hubo un error con los datos')
+                return
+            else:
+                work.insert_rows(data, row)
+                work.format('A2:Z1114', self.format)
+                self.logger.info('Se formatearon y mandaron lo datos')
         
         except (gs.exceptions.APIError, Exception) as e:
-             self.logger.error(f'Hubo un error: {e}')
+             self.logger.error(f'Hubo un error en POST: {e}')
     
     def get(self, sheet:int):
-        self.logger.info('Se obtuvieron los datos')
         try:
-            return pd.DataFrame(self.work(sheet).get_all_records())
-        
+            self.logger.info('Buscando hoja')
+            work = self.auth.open_by_url(f'https://docs.google.com/spreadsheets/d/{self.id}/edit?gid=0#gid=0').get_worksheet(sheet)
+            
+            if work is None:
+                self.logger.error('Hubo un error con los datos')
+                return
+            else:
+                self.logger.info('Se obtuvieron los datos')
+                return pd.DataFrame(work.get_all_records())
+
         except (gs.exceptions.APIError, Exception) as e:
              self.logger.error(f'Hubo un error: {e}')
 
     def delete(self, sheet:int, start:int, end:int):
-        self.logger.info('Se borro la fila de datos')
         try:
-            self.work(sheet).delete_rows(start, end)
+            self.logger.info('Buscando hoja')
+            work = self.auth.open_by_url(f'https://docs.google.com/spreadsheets/d/{self.id}/edit?gid=0#gid=0').get_worksheet(sheet)
+            
+            if work is None:
+                self.logger.error('Hubo un error con los datos')
+                return
+            else:
+                work.delete_rows(start, end)
+                self.logger.info('Se borro')
 
         except (gs.exceptions.APIError, Exception) as e:
              self.logger.error(f'Hubo un error: {e}')
@@ -71,7 +84,15 @@ class Sheet:
     def clear(self, sheet:int):
         self.logger.info('Se limpio la hoja')
         try:
-            self.work(sheet).clear()
+            self.logger.info('Buscando hoja')
+            work = self.auth.open_by_url(f'https://docs.google.com/spreadsheets/d/{self.id}/edit?gid=0#gid=0').get_worksheet(sheet)
+            
+            if work is None:
+                self.logger.error('Hubo un error con los datos')
+                return
+            else:
+                work.clear()
+                self.logger.info('Se limpio la hoja')
 
         except (gs.exceptions.APIError, Exception) as e:
              self.logger.error(f'Hubo un error: {e}')

@@ -11,7 +11,7 @@ class Web(Flask):
         self.logger.info('Server iniziado')
         self.path =  os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'logs', 'Web.log'))
         
-        self.api = Sheet('1-w-sizFV2i0BTeEd-PzQ9oQojd3A2Y_pvm2XJ4e35z8&authuser')
+        self.api = Sheet('1-w-sizFV2i0BTeEd-PzQ9oQojd3A2Y_pvm2XJ4e35z8')
                 
         self.add_url_rule('/', endpoint='index', view_func=self.index)
         self.add_url_rule('/App/match', endpoint='match', view_func=self.match, methods=['GET','POST'])
@@ -19,7 +19,7 @@ class Web(Flask):
         self.add_url_rule('/view', endpoint='view', view_func=self.logs, methods=['GET'])
 
     def index(self):
-        self.logger.info('Se entro a index')
+        self.logger.info('Se entro a index')    
         try:
             return render_template('index.html')
         except Exception as e:
@@ -30,7 +30,7 @@ class Web(Flask):
         try:
             if request.method == 'POST':
                 DATA = request.form.getlist('data[]')
-                self.api.post([[DATA]], 0, 2)
+                self.api.post([DATA], 0, 2)
                 return redirect(url_for('match'))
             return render_template('match.html')
         except Exception as e:
@@ -41,7 +41,7 @@ class Web(Flask):
         try:
             if request.method == 'POST':
                 DATA = request.form.getlist('data[]')
-                self.api.post([[DATA]], 1, 2)
+                self.api.post([DATA], 1, 2)
                 return redirect(url_for('pits'))
             return render_template('pits.html')
         except Exception as e:
