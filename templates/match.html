@@ -11,11 +11,17 @@
 {% block body %}
     <h1>App FRC Matches</h1>
     <form action="{{ url_for('match') }}" method="post">
+        <h1>Registro</h1>
+
         <label for="scouter">¿Iniciales del scouter?</label><br>
         <input type="text" name="data[]" id="scouter"><br>
 
-        <label for="match">¿Tipo de match?</label><br>
-        <input type="text" name="data[]" id="match"><br>
+        <label for="type">¿Tipo de match?</label>
+        <select name="data[]" id="type" >
+            <option value="Practicas">Practicas</option>
+            <option value="Quals">Quals</option>
+            <option value="Play-off">Play-off</option>
+        </select><br>
 
         <label for="num_match">¿Número de match?</label><br>
         <input type="number" name="data[]" id="num_match"><br>
@@ -33,11 +39,11 @@
 
             <h2>Autonomo</h2>
 
-            <p>¿Salio de la zona inicial?</p>
-            <input type="radio" name="data[]" id="salio_si" value="si">
-            <label for="salio_si_a">Si</label><br>
-            <input type="radio" name="data[]" id="salio_no_a" value="no">
-            <label for="salio_no">No</label><br>
+            <label for="salio">¿Salio de la zona inicial?</label>
+            <select name="data[]" id="salio">
+                <option value="si">si</option>
+                <option value="no">no</option>
+            </select><br>
 
             <label for="l1_a">Level 1</label><br>
             <input type="number" name="data[]" id="l1_a"><br>
@@ -56,8 +62,6 @@
 
             <label for="net_a">net</label><br>
             <input type="number" name="data[]" id="net_a"><br>
-
-            <p id="autonomo"></p>
 
             <h2>TeleOp</h2>
 
@@ -79,20 +83,41 @@
             <label for="net_t">net</label><br>
             <input type="number" name="data[]" id="net_t"><br>
 
-            <p id="teleOp"></p>
-
             <h2>End game</h2>   
             <label for="estaciona">¿Donde se estaciona?</label>
             <select name="data[]" id="estaciona" >
                 <option value="No se estaciono">No se estaciono</option>
                 <option value="Intento pero no pudo">Intento pero no pudo</option>
-                <option value="barage zone">BARAGE ZONE</option>
-                <option value="shallow cage">shallow CAGE</option>
-                <option value="deep cage">deep CAGE</option>
+                <option value="barage zone">barge zone</option>
+                <option value="shallow cage">shallow cage</option>
+                <option value="deep cage">deep cage</option>
             </select>
 
-            <p id="end"></p>
+        </details>
 
+        <details>
+            <summary>Preguntas</summary>
+
+            <label for="driver">Habilidad del driver</label>
+            <select name="data[]" id="driver">
+                <option value="No observado">No observado</option>
+                <option value="Buena">Buena</option>
+                <option value="Mala">Mala</option>
+                <option value="Promedio">Promedio</option>
+                <option value="Bastante Buena">Bastante Buena</option>
+            </select><br>
+
+            <label for="vel">Velocidad</label>
+            <select name="dara[]" id="vel">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select><br>
+            
+            <label for="comentarios">Comentarios</label><br>
+            <input type="text" name="data[]" id="comentarios"><br>
         </details>
 
         <button type="submit" onclick="document.getElementsByName('data[]').values = '';">Ingresar</button><br>

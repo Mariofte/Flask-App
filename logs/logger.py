@@ -9,7 +9,7 @@ class Logger:
         
         if not self.logger.handlers:
             formatter = log.Formatter(
-                '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+                '  %(asctime)s - %(name)s - %(levelname)s - %(message)s'
             )
             
             console = log.StreamHandler()

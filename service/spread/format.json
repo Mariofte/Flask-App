@@ -1,3 +1,63 @@
 {
-    "horizontalAlignment": "CENTER"
+    "horizontalAlignment": "CENTER",
+    "padding": {
+        "top": 10,
+        "right": 10,
+        "bottom": 10,
+        "left": 10
+    },
+    "borders": {
+            "top": {
+                "style": "SOLID_MEDIUM",
+                "width": 5,
+                "colorStyle": {
+                    "rgbColor": {
+                        "red": 0,
+                        "green": 0,
+                        "blue": 0
+                    }   
+                }
+            },
+            "bottom": {
+                "style": "SOLID_MEDIUM",
+                "width": 5,
+                "colorStyle": {
+                    "rgbColor": {
+                        "red": 0,
+                        "green": 0,
+                        "blue": 0
+                    }
+                }
+            },
+            "left": {
+                "style": "SOLID_MEDIUM",
+                "width": 5,
+                "colorStyle": {
+                    "rgbColor": {
+                        "red": 0,
+                        "green": 0,
+                        "blue": 0
+                    }
+                }
+            },
+            "right": {
+                "style": "SOLID_MEDIUM",
+                "width": 5,
+                "colorStyle": {
+                    "rgbColor": {
+                        "red": 0,
+                        "green": 0,
+                        "blue": 0
+                    }
+                }
+            }
+    },
+    "textFormat": {
+        "fontFamily": "arial",
+        "bold": false,
+        "fontSize": 12
+    },
+    "numberFormat": {
+        "type": "NUMBER" 
+    }
 }

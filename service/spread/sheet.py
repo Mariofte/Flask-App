@@ -4,6 +4,7 @@ import os
 import json
 import pandas as pd
 import gspread as gs
+import numpy as np
 from oauth2client.service_account import ServiceAccountCredentials as sac
 from logs import Logger
 
@@ -14,13 +15,16 @@ class Sheet:
         self.logger = Logger('Sheet').get_logger()
         
         try:
+            self.logger.info('Se esta cargando el formato')
             with open(os.path.join(self.path, 'format.json')) as f:
                 self.format = json.load(f)
+            self.logger.info('Se cargo el formato')
         
         except (json.JSONDecodeError, Exception) as e:
             self.logger.error(f'Hubo un error en el formato: {e}')
     
         try:
+            self.logger.info('Se estan cargando las credensiales y atenticando')
             self.creds = sac.from_json_keyfile_name(
                 filename=os.path.join(self.path, 'token.json'),
                 scopes=[
@@ -29,23 +33,22 @@ class Sheet:
                 ]
             )
             self.auth = gs.authorize(self.creds)
+            self.logger.info('se terminaron de cargar y autenticar')
 
         except (json.JSONDecodeError, gs.exceptions.APIError, Exception) as e:
              self.logger.error(f'Hubo un error en el token: {e}')
             
-    
-
     def post(self, data:list, sheet:int, row:int):
         try:
             self.logger.info('Buscando hoja')
-            work = self.auth.open_by_url(f'https://docs.google.com/spreadsheets/d/{self.id}/edit?gid=0#gid=0').get_worksheet(sheet)
+            work = self.auth.open_by_key(self.id).get_worksheet(sheet)
             
             if work is None:
                 self.logger.error('Hubo un error con los datos')
                 return
             else:
                 work.insert_rows(data, row)
-                work.format('A2:Z1114', self.format)
+                work.format('2:2', self.format)
                 self.logger.info('Se formatearon y mandaron lo datos')
         
         except (gs.exceptions.APIError, Exception) as e:
@@ -54,10 +57,10 @@ class Sheet:
     def get(self, sheet:int):
         try:
             self.logger.info('Buscando hoja')
-            work = self.auth.open_by_url(f'https://docs.google.com/spreadsheets/d/{self.id}/edit?gid=0#gid=0').get_worksheet(sheet)
+            work = self.auth.open_by_key(self.id).get_worksheet(sheet)
             
             if work is None:
-                self.logger.error('Hubo un error con los datos')
+                self.logger.error('Hubo un error con los datos') 
                 return
             else:
                 self.logger.info('Se obtuvieron los datos')
@@ -65,11 +68,26 @@ class Sheet:
 
         except (gs.exceptions.APIError, Exception) as e:
              self.logger.error(f'Hubo un error: {e}')
+    
+    def gat_array(self, sheet:int):
+        try:
+            self.logger.info('Buscando hoja')
+            work = self.auth.open_by_key(self.id).get_worksheet(sheet)
+            
+            if work is None:
+                self.logger.error('Hubo un error con los datos')
+                return
+            else:
+                self.logger.info('Se obtuvieron los datos')
+                return np.array(work.get_all_records())
+        
+        except (gs.exceptions.APIError, Exception) as e:
+             self.logger.error(f'Hubo un error: {e}')   
 
     def delete(self, sheet:int, start:int, end:int):
         try:
             self.logger.info('Buscando hoja')
-            work = self.auth.open_by_url(f'https://docs.google.com/spreadsheets/d/{self.id}/edit?gid=0#gid=0').get_worksheet(sheet)
+            work = self.auth.open_by_key(self.id).get_worksheet(sheet)
             
             if work is None:
                 self.logger.error('Hubo un error con los datos')
@@ -85,14 +103,14 @@ class Sheet:
         self.logger.info('Se limpio la hoja')
         try:
             self.logger.info('Buscando hoja')
-            work = self.auth.open_by_url(f'https://docs.google.com/spreadsheets/d/{self.id}/edit?gid=0#gid=0').get_worksheet(sheet)
+            work = self.auth.open_by_key(self.id).get_worksheet(sheet)
             
             if work is None:
                 self.logger.error('Hubo un error con los datos')
                 return
             else:
                 work.clear()
-                self.logger.info('Se limpio la hoja')
+                self.logger.info('Se limpio la hoja ')
 
         except (gs.exceptions.APIError, Exception) as e:
              self.logger.error(f'Hubo un error: {e}')

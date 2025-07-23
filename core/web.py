@@ -8,15 +8,19 @@ class Web(Flask):
         super().__init__(name, static_folder=static_folder, template_folder=template_folder)
         
         self.logger = Logger('Web').get_logger()
-        self.logger.info('Server iniziado')
         self.path =  os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'logs', 'Web.log'))
+        self.logger.info('Server iniziado')
         
+        self.logger.info('Se esta inciand el API de sheet')
         self.api = Sheet('1-w-sizFV2i0BTeEd-PzQ9oQojd3A2Y_pvm2XJ4e35z8')
+        self.logger.info('Se termino de iniciar')
                 
+        self.logger.info('Se estan creando las rutas')
         self.add_url_rule('/', endpoint='index', view_func=self.index)
         self.add_url_rule('/App/match', endpoint='match', view_func=self.match, methods=['GET','POST'])
         self.add_url_rule('/App/pits', endpoint='pits', view_func=self.pits, methods=['GET','POST'])
         self.add_url_rule('/view', endpoint='view', view_func=self.logs, methods=['GET'])
+        self.logger.info('Se termino de crear las rutas')
 
     def index(self):
         self.logger.info('Se entro a index')    
@@ -53,4 +57,4 @@ class Web(Flask):
                 data = ''.join(f.readlines())
             return render_template('view.html', data=data)
         else:
-            self.logger.error('No existe el archivo')
+            print('no existe el archivo')

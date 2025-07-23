@@ -6,7 +6,104 @@
     {{ super() }}
 {% endblock %}
 {% block body %}
+    <h1>App FRC Pits</h1>
     <form action="{{ url_for('pits') }}" method="post">
-        <p>Hola pits</p>
+        <h1>Registro</h1>
+
+        <label for="scouter">¿Iniciales del scouter?</label><br>
+        <input type="text" name="data[]" id="scouter"><br>
+
+        <label for="num_team">¿Número de equipo?</label><br>
+        <input type="text" name="data[]" id="num_team"><br>
+
+        <details>
+            <summary>Robot</summary>
+
+            <label for="chasis">¿Cuál es el tipo de chasis?</label>
+            <select name="data[]" id="chasis">
+                <option value="Swerve">Swerve</option>
+                <option value="Mecanum">Mecanum</option>
+                <option value="Tank">Tank</option>
+            </select><br>
+
+            <label for="tiempo">¿Cuantos años tiene con ese chasis?</label><br>
+            <input type="number" name="data[]" id="tiempo"><br>
+
+            <label for="Perímetro">¿Perímetro del robot?</label><br>
+            <input type="number" name="data[]" id="Perímetro"><br>
+
+            <label for="elemet">¿Qué game element controlan?</label>
+            <select name="data[]" id="elemt">
+                <option value="hambos">hambos</option>
+                <option value="coral">coral</option>
+                <option value="alga"></option>
+            </select><br>
+            
+            <label for="nivel">¿En qué niveles anotas?</label>
+            <select name="data[]" id="nivel">
+                <option value="No asemos">No asemos</option>
+                <option value="Colares level 1">Colares level 1</option>
+                <option value="Colares level 2">Colares level 2</option>
+                <option value="Colares level 3">Colares level 3</option>
+                <option value="Colares level 4">Colares level 4</option>
+                <option value="todos">todos</option>
+            </select><br>
+
+            <label for="ciclos">¿Cuántos ciclos hacen?</label><br>
+            <input type="number" name="data[]" id="cicos"><br>
+
+            <label for="escalan">¿Hasta dónde escalan?</label>
+            <select name="data[]" id="escalan">
+                <option value="No">No</option>
+                <option value="shallow">sheellow</option>
+                <option value="deep">deep</option>
+            </select><br>
+        </details>
+
+        <details>
+            <summary>Preguntas</summary>
+
+            <label for="pilas">¿Cuántas pilas tienen?</label><br>
+            <input type="number" name="data[]" id="pilas"><br>
+
+            <label for="driver">¿Cuánto tiempo tiene manejando el driver de Chasis?</label>
+            <select name="data[]" id="driver">
+                <option value="1">1 temporada</option>
+                <option value="2">2 temporada</option>
+                <option value="3">3 temporada</option>
+                <option value="4">4 temporada</option>
+            </select><br>
+
+            <label for="sistemas">¿Cuánto tiempo tiene manejando el driver de Chasis?</label>
+            <select name="data[]" id="sistemas">
+                <option value="1">1 temporada</option>
+                <option value="2">2 temporada</option>
+                <option value="3">3 temporada</option>
+                <option value="4">4 temporada</option>
+            </select><br>
+
+            <label for="practicas">¿Cuánto tiene practicando?</label>
+            <select name="data[]" id="practicas">
+                <option value="1">1 semana</option>
+                <option value="2">2 semana</option>
+                <option value="3">3 semana</option>
+                <option value="1 mes">Más de 4 temporadas</option>
+            </select><br>
+
+            <label for="respuestos">¿Tienen repuestos para piezas?</label>
+            <select name="data[]" id="respuestos">
+                <option value="si">si</option>
+                <option value="no">no</option>
+            </select><br>
+
+            <label for="partes">¿Para que partes del robot?</label><br>
+            <input type="text" name="data[]" id="partes"><br>
+
+            <label for="regla">¿Cual es su regla favorita del manual?</label><br>
+            <input type="text" name="data[]" id="regla"><br>
+
+        </details>
+        
+        <button type="submit" onclick="document.getElementsByName('data[]').values = ' ';" >Ingresar</button>
     </form>
 {% endblock %}
