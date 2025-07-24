@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "venv/Scripts/python.exe", // o "venv/bin/python" en Linux/Mac
+    "python.pythonPath": "venv/Scripts/python.exe",
     "python.envFile": "${workspaceFolder}/.env",
     "python.analysis.extraPaths": [
         "."

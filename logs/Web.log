@@ -1,49 +1,32 @@
-2025-07-21 15:56:59,370 - Web - INFO - Server iniziado
-2025-07-21 15:56:59,371 - Web - INFO - Se esta inciand el API de sheet
-2025-07-21 15:56:59,372 - Sheet - INFO - Se esta cargando el formato
-2025-07-21 15:56:59,373 - Sheet - INFO - Se cargo el formato
-2025-07-21 15:56:59,373 - Sheet - INFO - Se estan cargando las credensiales
-2025-07-21 15:56:59,376 - Sheet - INFO - Se terminaro de cargar
-2025-07-21 15:56:59,376 - Sheet - INFO - autenticando credenciales
-2025-07-21 15:56:59,378 - Sheet - INFO - se terminaron de autenticar
-2025-07-21 15:56:59,379 - Web - INFO - Se termino de iniciar
-2025-07-21 15:56:59,379 - Web - INFO - Se estan creando las rutas
-2025-07-21 15:56:59,381 - Web - INFO - Se termino de crear las rutas
- INFO - Server iniziado - 2025-07-22 09:23:44,087 - Web
- INFO - Se esta inciand el API de sheet - 2025-07-22 09:23:44,088 - Web
- INFO - Se esta cargando el formato - 2025-07-22 09:23:44,092 - Sheet
- INFO - Se cargo el formato - 2025-07-22 09:23:44,095 - Sheet
- INFO - Se estan cargando las credensiales y atenticando - 2025-07-22 09:23:44,095 - Sheet
- INFO - se terminaron de cargar y autenticar - 2025-07-22 09:23:44,112 - Sheet
- INFO - Se termino de iniciar - 2025-07-22 09:23:44,113 - Web
- INFO - Se estan creando las rutas - 2025-07-22 09:23:44,113 - Web
- INFO - Se termino de crear las rutas - 2025-07-22 09:23:44,115 - Web
- INFO - Se entro a index - 2025-07-22 09:24:00,645 - Web
- INFO - Se entro a match - 2025-07-22 09:24:21,807 - Web
- INFO - Se entro a match - 2025-07-22 09:24:51,596 - Web
- INFO - Buscando hoja - 2025-07-22 09:24:51,607 - Sheet
- INFO - Se formatearon y mandaron lo datos - 2025-07-22 09:24:54,957 - Sheet
-  2025-07-22 19:32:21,763 - Web - INFO - Server iniziado
-  2025-07-22 19:32:21,764 - Web - INFO - Se esta inciand el API de sheet
-  2025-07-22 19:32:21,766 - Sheet - INFO - Se esta cargando el formato
-  2025-07-22 19:32:21,767 - Sheet - INFO - Se cargo el formato
-  2025-07-22 19:32:21,768 - Sheet - INFO - Se estan cargando las credensiales y atenticando
-  2025-07-22 19:32:21,773 - Sheet - INFO - se terminaron de cargar y autenticar
-  2025-07-22 19:32:21,774 - Web - INFO - Se termino de iniciar
-  2025-07-22 19:32:21,774 - Web - INFO - Se estan creando las rutas
-  2025-07-22 19:32:21,776 - Web - INFO - Se termino de crear las rutas
-  2025-07-22 19:32:42,717 - Web - INFO - Se entro a index
-  2025-07-22 19:32:47,352 - Web - INFO - Se entro a match
-  2025-07-22 19:33:21,611 - Web - INFO - Se entro a pits
-  2025-07-22 19:33:41,524 - Web - INFO - Se entro a pits
-  2025-07-22 19:34:26,010 - Web - INFO - Server iniziado
-  2025-07-22 19:34:26,010 - Web - INFO - Se esta inciand el API de sheet
-  2025-07-22 19:34:26,011 - Sheet - INFO - Se esta cargando el formato
-  2025-07-22 19:34:26,013 - Sheet - INFO - Se cargo el formato
-  2025-07-22 19:34:26,014 - Sheet - INFO - Se estan cargando las credensiales y atenticando
-  2025-07-22 19:34:26,018 - Sheet - INFO - se terminaron de cargar y autenticar
-  2025-07-22 19:34:26,018 - Web - INFO - Se termino de iniciar
-  2025-07-22 19:34:26,019 - Web - INFO - Se estan creando las rutas
-  2025-07-22 19:34:26,026 - Web - INFO - Se termino de crear las rutas
-  2025-07-22 19:34:29,394 - Web - INFO - Se entro a pits
-  2025-07-22 19:34:48,617 - Web - INFO - Se entro a match
+  2025-07-23 16:17:09,923 - Web - INFO - Server iniziado
+  2025-07-23 16:17:09,923 - Web - INFO - Se esta inciand el API de sheet
+  2025-07-23 16:17:09,924 - Sheet - INFO - Se esta cargando el formato
+  2025-07-23 16:17:09,928 - Sheet - INFO - Se cargo el formato
+  2025-07-23 16:17:09,929 - Sheet - INFO - Se estan cargando las credensiales y atenticando
+  2025-07-23 16:17:09,933 - Sheet - INFO - se terminaron de cargar y autenticar
+  2025-07-23 16:17:09,933 - Web - INFO - Se termino de iniciar
+  2025-07-23 16:17:09,933 - Web - INFO - Se estan creando las rutas
+  2025-07-23 16:17:09,935 - Web - INFO - Se termino de crear las rutas
+  2025-07-23 16:17:39,974 - Web - INFO - Se entro a match
+  2025-07-23 16:18:30,987 - Web - INFO - Se entro a match
+  2025-07-23 17:28:23,057 - Web - INFO - Server iniziado
+  2025-07-23 17:28:23,058 - Web - INFO - Se esta inciand el API de sheet
+  2025-07-23 17:28:23,059 - Sheet - INFO - Se esta cargando el formato
+  2025-07-23 17:28:23,060 - Sheet - INFO - Se cargo el formato
+  2025-07-23 17:28:23,060 - Sheet - INFO - Se estan cargando las credensiales y atenticando
+  2025-07-23 17:28:23,064 - Sheet - INFO - se terminaron de cargar y autenticar
+  2025-07-23 17:28:23,065 - Web - INFO - Se termino de iniciar
+  2025-07-23 17:28:23,065 - Web - INFO - Se estan creando las rutas
+  2025-07-23 17:28:23,067 - Web - INFO - Se termino de crear las rutas
+  2025-07-23 17:28:26,780 - Web - INFO - Se entro a index
+  2025-07-23 17:28:31,579 - Web - INFO - Se entro a match
+  2025-07-23 17:30:46,213 - Web - INFO - Server iniziado
+  2025-07-23 17:30:46,213 - Web - INFO - Se esta inciand el API de sheet
+  2025-07-23 17:30:46,214 - Sheet - INFO - Se esta cargando el formato
+  2025-07-23 17:30:46,216 - Sheet - INFO - Se cargo el formato
+  2025-07-23 17:30:46,216 - Sheet - INFO - Se estan cargando las credensiales y atenticando
+  2025-07-23 17:30:46,220 - Sheet - INFO - se terminaron de cargar y autenticar
+  2025-07-23 17:30:46,221 - Web - INFO - Se termino de iniciar
+  2025-07-23 17:30:46,221 - Web - INFO - Se estan creando las rutas
+  2025-07-23 17:30:46,227 - Web - INFO - Se termino de crear las rutas
+  2025-07-23 17:30:48,835 - Web - INFO - Se entro a match

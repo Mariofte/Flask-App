@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
     {% block head %}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/sidebar.css') }}">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/form.css') }}">
         <script src="{{ url_for('static', filename='js/sidebar.js') }}"></script>
-        {% block script %}{% endblock %}
-        <title>App</title>
+        {% block scripts %}{% endblock %}
+        <title>{% block title %}{% endblock %}</title>
     {% endblock %}
 </head>
 <body>
@@ -17,7 +19,7 @@
             <a href="{{ url_for('pits') }}">Pits</a>
         </div>
         <div id="main">
-            <button type="sumbit" onclick="Openbar()">&#9776;</button>
+            <button type="sumbit" class="btn" onclick="Openbar()"><i class="fa fa-bars"></i></button>
         </div>
     {% endblock %}
     {% block body %}{% endblock %}

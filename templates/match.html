@@ -1,9 +1,7 @@
 {% extends 'layout.html' %}
 {% block head %}
     {{ super() }}
-    {% block script %}
-        <script src="{{ url_for('static', filename='js/Math.js') }}"></script>
-    {% endblock %}
+    {% block script %}{% endblock %}
 {% endblock %}
 {% block sidebar %}
     {{ super() }}
@@ -26,7 +24,7 @@
         <label for="num_match">¿Número de match?</label><br>
         <input type="number" name="data[]" id="num_match"><br>
 
-        <label for="num_team">¿Número de equipo?</label><br>
+        <label for="num_team">¿Nombre del pais?</label><br>
         <input type="text" name="data[]" id="num_team"><br>
 
         <img src="{{ url_for('static', filename='image/Cancha.png') }}"><br>
@@ -37,69 +35,53 @@
         <details>
             <summary>Match</summary>
 
-            <h2>Autonomo</h2>
-
-            <label for="salio">¿Salio de la zona inicial?</label>
-            <select name="data[]" id="salio">
-                <option value="si">si</option>
-                <option value="no">no</option>
-            </select><br>
-
-            <label for="l1_a">Level 1</label><br>
-            <input type="number" name="data[]" id="l1_a"><br>
-
-            <label for="l2_a">Level 2</label><br>
-            <input type="number" name="data[]" id="l2_a"><br>
-
-            <label for="l3_a">Level 3</label><br>
-            <input type="number" name="data[]" id="l3_a"><br>
-
-            <label for="l4_a">Level 4</label><br>
-            <input type="number" name="data[]" id="l4_a"><br>
-
-            <label for="processor_a">processor</label><br>
-            <input type="number" name="data[]" id="processor_a"><br>
-
-            <label for="net_a">net</label><br>
-            <input type="number" name="data[]" id="net_a"><br>
-
             <h2>TeleOp</h2>
 
-            <label for="l1_t">Level 1</label><br>
-            <input type="number" name="data[]" id="l1_t"><br>
+            <label for="barrier">¿Cuantas barrier saco el robot?</label><br>
+            <input type="number" name="data[]" id="barrier" min="0" max="3" ><br>
+            
+            <label for="mitigator">¿Cuantos barrier puesto en el robot al mitigator?</label><br>
+            <input type="number" name="data[]" id="mitigator" min="0" max="3"><br>
 
-            <label for="l2_t">Level 2</label><br>
-            <input type="number" name="data[]" id="l2_t"><br>
+            <label for="accelerator">¿El robot usa el mitigator?</label>
+            <select name="data[]" id="accelerator">
+                <option value="no">no</option>
+                <option value="si">si</option>
+            </select><br>
 
-            <label for="l3_t">Level 3</label><br>
-            <input type="number" name="data[]" id="l3_t"><br>
+            <label for="biodiversity_robot">¿Cuantas biodiversity a apuesto el robot?</label><br>
+            <input type="number" name="data[]" id="biodiversity_human" min="0" max="200"><br>
 
-            <label for="l4_t">Level 4</label><br>
-            <input type="number" name="data[]" id="l4_t"><br>
+            <label for="biodiversity_human">¿Cuantas biodiversity a puesto el human?</label><br>
+            <input type="number" name="data[]" id="biodiversity_human" min="0" max="200"><br>
 
-            <label for="processor_t">processor</label><br>
-            <input type="number" name="data[]" id="processor_t"><br>
 
-            <label for="net_t">net</label><br>
-            <input type="number" name="data[]" id="net_t"><br>
 
             <h2>End game</h2>   
-            <label for="estaciona">¿Donde se estaciona?</label>
+            <label for="estaciona">¿Asta donde escala?</label>
             <select name="data[]" id="estaciona" >
-                <option value="No se estaciono">No se estaciono</option>
-                <option value="Intento pero no pudo">Intento pero no pudo</option>
-                <option value="barage zone">barge zone</option>
-                <option value="shallow cage">shallow cage</option>
-                <option value="deep cage">deep cage</option>
-            </select>
+                <option value="1">Level 1</option>
+                <option value="2">Level 2</option>
+                <option value="3">Level 3</option>
+                <option value="4">Level 4</option>
+            </select><br>
 
         </details>
 
         <details>
             <summary>Preguntas</summary>
 
-            <label for="driver">Habilidad del driver</label>
+            <label for="driver">Habilidad de los drivers</label>
             <select name="data[]" id="driver">
+                <option value="No observado">No observado</option>
+                <option value="Buena">Buena</option>
+                <option value="Mala">Mala</option>
+                <option value="Promedio">Promedio</option>
+                <option value="Bastante Buena">Bastante Buena</option>
+            </select><br>
+
+            <label for="human">Habilidad del human</label>
+            <select name="data[]" id="human">
                 <option value="No observado">No observado</option>
                 <option value="Buena">Buena</option>
                 <option value="Mala">Mala</option>
