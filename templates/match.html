@@ -30,76 +30,84 @@
         <img src="{{ url_for('static', filename='image/Cancha.png') }}"><br>
 
         <label for="posición">¿Posición inicial?</label><br>
-        <input type="number" name="data[]" id="posición"><br>
+        <select name="data[]" id="posición">
+            <option value="1">Posición 1</option>
+            <option value="2">Posición 2</option>
+            <option value="3">Posición 3</option>
+            <option value="4">Posición 4</option>
+            <option value="5">Posición 5</option>
+            <option value="6">Posición 6</option>
+        </select><br>
 
         <details>
             <summary>Match</summary>
 
             <h2>TeleOp</h2>
+            <div class="center">
+                <label for="barrier">¿Cuantas barrier saco el robot?</label><br>
+                <input type="number" name="data[]" id="barrier" min="0" max="3" ><br>
+                
+                <label for="mitigator">¿Cuantos barrier puesto en el robot al mitigator?</label><br>
+                <input type="number" name="data[]" id="mitigator" min="0" max="3"><br>
 
-            <label for="barrier">¿Cuantas barrier saco el robot?</label><br>
-            <input type="number" name="data[]" id="barrier" min="0" max="3" ><br>
-            
-            <label for="mitigator">¿Cuantos barrier puesto en el robot al mitigator?</label><br>
-            <input type="number" name="data[]" id="mitigator" min="0" max="3"><br>
+                <label for="accelerator">¿El robot usa el accelerator?</label><br>
+                <select name="data[]" id="accelerator">
+                    <option value="no">no</option>
+                    <option value="si">si</option>
+                </select><br>
 
-            <label for="accelerator">¿El robot usa el mitigator?</label>
-            <select name="data[]" id="accelerator">
-                <option value="no">no</option>
-                <option value="si">si</option>
-            </select><br>
+                <label for="biodiversity_robot">¿Cuantas biodiversity a apuesto el robot?</label><br>
+                <input type="number" name="data[]" id="biodiversity_human" min="0" max="200"><br>
 
-            <label for="biodiversity_robot">¿Cuantas biodiversity a apuesto el robot?</label><br>
-            <input type="number" name="data[]" id="biodiversity_human" min="0" max="200"><br>
+                <label for="biodiversity_human">¿Cuantas biodiversity a puesto el human?</label><br>
+                <input type="number" name="data[]" id="biodiversity_human" min="0" max="200"><br>
 
-            <label for="biodiversity_human">¿Cuantas biodiversity a puesto el human?</label><br>
-            <input type="number" name="data[]" id="biodiversity_human" min="0" max="200"><br>
-
-
-
-            <h2>End game</h2>   
-            <label for="estaciona">¿Asta donde escala?</label>
-            <select name="data[]" id="estaciona" >
-                <option value="1">Level 1</option>
-                <option value="2">Level 2</option>
-                <option value="3">Level 3</option>
-                <option value="4">Level 4</option>
-            </select><br>
-
+                <h2>End game</h2>   
+                <label for="escala">¿Asta donde escala?</label><br>
+                <select name="data[]" id="escala" >
+                    <option value="1">Level 1</option>
+                    <option value="2">Level 2</option>
+                    <option value="3">Level 3</option>
+                    <option value="4">Level 4</option>
+                </select><br>
+            </div>
         </details>
 
         <details>
             <summary>Preguntas</summary>
 
-            <label for="driver">Habilidad de los drivers</label>
-            <select name="data[]" id="driver">
-                <option value="No observado">No observado</option>
-                <option value="Buena">Buena</option>
-                <option value="Mala">Mala</option>
-                <option value="Promedio">Promedio</option>
-                <option value="Bastante Buena">Bastante Buena</option>
-            </select><br>
+            <div class="center">
+                <label for="driver">Habilidad de los drivers</label>
+                <select name="data[]" id="driver">
+                    <option value="No observado">No observado</option>
+                    <option value="Buena">Buena</option>
+                    <option value="Mala">Mala</option>
+                    <option value="Promedio">Promedio</option>
+                    <option value="Bastante Buena">Bastante Buena</option>
+                </select><br>
 
-            <label for="human">Habilidad del human</label>
-            <select name="data[]" id="human">
-                <option value="No observado">No observado</option>
-                <option value="Buena">Buena</option>
-                <option value="Mala">Mala</option>
-                <option value="Promedio">Promedio</option>
-                <option value="Bastante Buena">Bastante Buena</option>
-            </select><br>
+                <label for="human">Habilidad del human</label>
+                <select name="data[]" id="human">
+                    <option value="No observado">No observado</option>
+                    <option value="Buena">Buena</option>
+                    <option value="Mala">Mala</option>
+                    <option value="Promedio">Promedio</option>
+                    <option value="Bastante Buena">Bastante Buena</option>
+                </select><br>
 
-            <label for="vel">Velocidad</label>
-            <select name="dara[]" id="vel">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select><br>
-            
-            <label for="comentarios">Comentarios</label><br>
-            <input type="text" name="data[]" id="comentarios"><br>
+                <label for="Velocidad">Velocidad</label>
+                <select name="dara[]" id="Velocidad">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select><br>
+                
+                <label for="comentarios">Comentarios</label><br>
+                <input type="text" name="data[]" id="comentarios"><br>
+            </div>
+
         </details>
 
         <button type="submit" onclick="document.getElementsByName('data[]').values = '';">Ingresar</button><br>

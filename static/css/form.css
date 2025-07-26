@@ -1,5 +1,15 @@
+details {
+    border-radius: 15px;
+    border: 1px solid rgba(28, 198, 193, 0.911);
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
 details summary {
-    color: rgb(205, 210, 66);
+    text-align: center;
+    color: rgb(109, 30, 174);
     text-decoration: solid;
     font-size: medium;
     font-family:Georgia, 'Times New Roman', Times, serif;
@@ -20,4 +30,49 @@ form button {
 
 form button:hover {
     background-color: rgb(65, 105, 225);
+}
+
+form .center {
+    margin: auto;
+    padding: 10px;
+}
+
+form input[type=text] {
+    background-color: rgb(83, 77, 77);
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-color: rgb(78, 22, 22);
+    color: rgb(255, 255, 255);
+    background-color: rgb(61, 6, 6);
+}
+
+form input[type=number] {
+    background-color: rgb(83, 77, 77);
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-color: rgb(78, 22, 22);
+    color: rgb(255, 255, 255);
+    background-color: rgb(61, 6, 6);
+}
+
+form select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-color: rgb(34, 255, 0);
+    color: rgb(255, 255, 255);
+    background-color: rgb(61, 6, 6);
+}
+
+form label {
+    color: rgb(255, 255, 255);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
