@@ -11,8 +11,8 @@ body h2 {
 }
 
 pre {
-    background: black;
-    color: rgb(0, 0, 0);
+    background: rgb(85, 82, 82);
+    color: rgb(26, 255, 0);
     padding: 1em;
 }
 
