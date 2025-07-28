@@ -6,6 +6,7 @@ import pandas as pd
 import gspread as gs
 import numpy as np
 from oauth2client.service_account import ServiceAccountCredentials as sac
+from gspread import auth
 from logs import Logger
 
 class Sheet:
@@ -13,6 +14,8 @@ class Sheet:
         self.id = id
         self.path = os.path.dirname(os.path.abspath(__file__))
         self.logger = Logger('Sheet').get_logger()
+        
+        
         
         try:
             self.logger.info('Se esta cargando el formato')

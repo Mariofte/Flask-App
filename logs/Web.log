@@ -10,3 +10,43 @@
   2025-07-27 01:22:32,349 - Web - INFO - Se entro a match
   2025-07-27 01:26:30,457 - Web - INFO - Se entro a match
   2025-07-27 01:26:57,191 - Web - INFO - Se entro a pits
+  2025-07-28 13:12:24,144 - Web - INFO - Server iniziado
+  2025-07-28 13:12:24,145 - Web - INFO - Se esta inciand el API de sheet
+  2025-07-28 13:12:24,146 - Sheet - INFO - Se esta cargando el formato
+  2025-07-28 13:12:24,148 - Sheet - INFO - Se cargo el formato
+  2025-07-28 13:12:24,148 - Sheet - INFO - Se estan cargando las credensiales y atenticando
+  2025-07-28 13:12:24,152 - Sheet - INFO - se terminaron de cargar y autenticar
+  2025-07-28 13:12:24,153 - Web - INFO - Se termino de iniciar
+  2025-07-28 13:12:24,153 - Web - INFO - Se estan creando las rutas
+  2025-07-28 13:12:24,154 - Web - INFO - Se termino de crear las rutas
+  2025-07-28 13:12:26,713 - Web - INFO - Server iniziado
+  2025-07-28 13:12:26,714 - Web - INFO - Se esta inciand el API de sheet
+  2025-07-28 13:12:26,714 - Sheet - INFO - Se esta cargando el formato
+  2025-07-28 13:12:26,716 - Sheet - INFO - Se cargo el formato
+  2025-07-28 13:12:26,716 - Sheet - INFO - Se estan cargando las credensiales y atenticando
+  2025-07-28 13:12:26,719 - Sheet - INFO - se terminaron de cargar y autenticar
+  2025-07-28 13:12:26,719 - Web - INFO - Se termino de iniciar
+  2025-07-28 13:12:26,719 - Web - INFO - Se estan creando las rutas
+  2025-07-28 13:12:26,721 - Web - INFO - Se termino de crear las rutas
+  2025-07-28 13:13:00,793 - Web - INFO - Server iniziado
+  2025-07-28 13:13:00,794 - Web - INFO - Se esta inciand el API de sheet
+  2025-07-28 13:13:00,795 - Sheet - INFO - Se esta cargando el formato
+  2025-07-28 13:13:00,799 - Sheet - INFO - Se cargo el formato
+  2025-07-28 13:13:00,799 - Sheet - INFO - Se estan cargando las credensiales y atenticando
+  2025-07-28 13:13:00,817 - Sheet - INFO - se terminaron de cargar y autenticar
+  2025-07-28 13:13:00,818 - Web - INFO - Se termino de iniciar
+  2025-07-28 13:13:00,819 - Web - INFO - Se estan creando las rutas
+  2025-07-28 13:13:00,827 - Web - INFO - Se termino de crear las rutas
+  2025-07-28 13:32:19,135 - Web - INFO - Server iniziado
+  2025-07-28 13:32:19,135 - Web - INFO - Se esta inciand el API de sheet
+  2025-07-28 13:32:19,136 - Sheet - INFO - Se esta cargando el formato
+  2025-07-28 13:32:19,137 - Sheet - INFO - Se cargo el formato
+  2025-07-28 13:32:19,138 - Sheet - INFO - Se estan cargando las credensiales y atenticando
+  2025-07-28 13:32:19,142 - Sheet - INFO - se terminaron de cargar y autenticar
+  2025-07-28 13:32:19,142 - Web - INFO - Se termino de iniciar
+  2025-07-28 13:32:19,143 - Web - INFO - Se estan creando las rutas
+  2025-07-28 13:32:19,145 - Web - INFO - Se termino de crear las rutas
+  2025-07-28 13:32:29,699 - Web - INFO - Se entro a index
+  2025-07-28 13:32:39,608 - Web - INFO - Se entro a match
+  2025-07-28 13:32:47,937 - Web - INFO - Se entro a pits
+  2025-07-28 13:33:01,533 - Web - INFO - Se entro a match

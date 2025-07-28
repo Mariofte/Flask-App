@@ -1,10 +1,12 @@
 import os
 from core import Web
 
+path = os.path.dirname(os.path.abspath(__file__))
+
 web = Web(
     __name__,
-    os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static'),
-    os.path.join(os.path.dirname(os.path.abspath(__file__)), 'templates')
+    os.path.join(path, 'static'),
+    os.path.join(path, 'templates')
 )
 
 if __name__ == '__main__':
